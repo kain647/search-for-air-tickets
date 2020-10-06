@@ -1,0 +1,30 @@
+<svg width="351" height="150" viewBox="0 0 351 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+    <filter id="filter" y="-40%" height="500">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="15" result="DROP" ></feGaussianBlur>
+
+        <feOffset in="SHADOW" dx="0" dy="-2" result="DROPSHADOW"></feOffset>
+
+        <!--
+              You can change the opacity using feComponentTransfer:
+
+              <feComponentTransfer in="DROPSHADOW" result="FINALSHADOW">
+                    <feFuncA type="table" tableValues="0 0.5"></feFuncA>
+                </feComponentTransfer>
+
+               or using feColorMatrix
+                 -->
+        <feColorMatrix type="matrix" in="DROPSHADOW" result="FINALSHADOW"
+                       values="1 0 0 0 0
+									  0 1 0 0 0
+									  0 0 1 0 0
+									  0 0 0 .2 0"></feColorMatrix>
+
+        <feMerge>
+            <feMergeNode in="SFINALHADOW"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+    </filter>
+    <path transform="translate(0 50)" filter="url(#filter)" d="M351 0.137329V99H0V0.137329C9.95267 1.23755 17.9488 8.82935 19.6606 18.5848C22.385 18.1994 25.1692 18 28 18C57.8762 18 82.5658 40.2062 86.4641 69.0137C86.8083 69.0046 87.1536 69 87.5 69C97.1887 69 106.042 72.5789 112.809 78.4868C115.697 77.5224 118.787 77 122 77C129.295 77 135.961 79.6937 141.058 84.1408C145.422 81.5121 150.534 80 156 80C165.452 80 173.847 84.5215 179.141 91.5194C183.259 89.2752 187.981 88 193 88C195.811 88 198.529 88.4 201.099 89.1462C205.396 78.5071 215.821 71 228 71C233.399 71 238.453 72.4752 242.781 75.0446C248.763 71.2181 255.872 69 263.5 69C263.846 69 264.192 69.0046 264.536 69.0137C268.434 40.2062 293.124 18 323 18C325.831 18 328.615 18.1994 331.339 18.5848C333.051 8.82935 341.047 1.23755 351 0.137329Z" fill="white"/>
+</svg>
