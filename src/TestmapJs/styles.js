@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-export const Box = styled.div`
-  display: flex;
-`;
 export const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
+  overflow: hidden;
   align-items: center;
-  height: 670px;
+  height: 650px;
   width: 375px;
   background-color: #2393ff;
   border-radius: 10px 10px 0px 0px;
@@ -30,6 +28,7 @@ export const HeaderText = styled.div`
 `;
 export const ContainerSchedule = styled.div`
   display: flex;
+  flex: 0 0 auto;
   height: 145px;
   width: 325px;
   overflow: hidden;
@@ -91,7 +90,7 @@ export const Cloud = styled.img.attrs(props => ({
 }))`
   display: flex;
   position: absolute;
-  top: 389px;
+  top: 355px;
   height: auto;
   width: 100%;
 `;
@@ -101,7 +100,7 @@ export const WhiteBox = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 545px;
+  bottom: 0;
   width: 100%;
   height: 150px;
   background-color: #fff;
@@ -134,4 +133,22 @@ export const FooterContainerSchedule = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+export const ContentContainer = styled.div`
+  display: flex;
+  flex: 0 0 auto;
+  height: 100%;
+  flex-direction: column;
+  overflow-y: scroll;
+`;
+export const ContainerWhite = styled.div`
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+`;
+export const HiddenDiv = styled.div`
+  display: flex;
+  flex: 0 0 auto;
+  height: 485px;
+  width: 100%;
 `;

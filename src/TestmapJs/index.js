@@ -5,7 +5,6 @@ import cloud from "../Logo/cloud-top.svg";
 import heart from "../Logo/kisspng.png";
 import {
   Container,
-  Box,
   Header,
   HeaderText,
   ContainerSchedule,
@@ -21,7 +20,10 @@ import {
   Favoriteflight,
   FavoriteflightSubtitle,
   Number,
-  FooterContainerSchedule
+  FooterContainerSchedule,
+  ContentContainer,
+  ContainerWhite,
+  HiddenDiv
 } from "./styles";
 
 const Icon = styled.i.attrs(props => ({
@@ -61,15 +63,45 @@ const Test = props => {
       color: "#25ACFE",
       airlines: southwest,
       number: "#3652"
+    },
+    {
+      departureCountry: "BWI",
+      arrivalCountry: "DEN",
+      departureTime: "Baltimore, NY (9:44am)",
+      arrivalTime: "Denver, CO (3:40pm)",
+      icon: "plane-departure",
+      color: "#25ACFE",
+      airlines: southwest,
+      number: "#3652"
+    },
+    {
+      departureCountry: "BWI",
+      arrivalCountry: "DEN",
+      departureTime: "Baltimore, NY (9:44am)",
+      arrivalTime: "Denver, CO (3:40pm)",
+      icon: "plane-departure",
+      color: "#25ACFE",
+      airlines: southwest,
+      number: "#3652"
+    },
+    {
+      departureCountry: "BWI",
+      arrivalCountry: "DEN",
+      departureTime: "Baltimore, NY (9:44am)",
+      arrivalTime: "Denver, CO (3:40pm)",
+      icon: "plane-departure",
+      color: "#25ACFE",
+      airlines: southwest,
+      number: "#3652"
     }
   ];
   return (
-    <Box>
-      <Container>
-        <Header>
-          <i className="fas fa-arrow-left"></i>
-          <HeaderText>Search Results</HeaderText>
-        </Header>
+    <Container>
+      <Header>
+        <i className="fas fa-arrow-left"></i>
+        <HeaderText>Search Results</HeaderText>
+      </Header>
+      <ContentContainer>
         {items.map(item => {
           const {
             departureCountry,
@@ -92,6 +124,9 @@ const Test = props => {
             />
           );
         })}
+        <HiddenDiv />
+      </ContentContainer>
+      <ContainerWhite>
         <Cloud cloud={cloud} />
         <WhiteBox>
           <Heart heart={heart} />
@@ -100,8 +135,8 @@ const Test = props => {
             Today - Mon, June 20th 2020
           </FavoriteflightSubtitle>
         </WhiteBox>
-      </Container>
-    </Box>
+      </ContainerWhite>
+    </Container>
   );
 };
 
